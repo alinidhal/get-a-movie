@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4a4fc87bb.js" crossorigin="anonymous"></script>
     <title>Get a Movie</title>
 </head>
 
@@ -30,46 +31,91 @@
     </nav>
     <header class="w-auto mt-5">
         <div class="container justify-content-center py-5">
-            <h1 class="h2">Bonjour, <br> Bienvenue dans notre site
+            <h1 class="h2 my-4">Bonjour, <br> Bienvenue dans notre site
             </h1>
-            <form class="offset-4 col-4 d-flex">
-                <input class="form-control me-2" type="search" placeholder="Nom du film" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Rechercher</button>
-            </form>
+            <!-- Search container -->
+            <div class="d-flex align-items-center justify-content-center search-container">
+                <div class="search-element flex-column align-items-lg-stretch position-relative">
+                    <h3>Rechercher un film : </h3>
+                    <input type="text" class="form-control" placeholder="Taper le titre ..." id="movie-search-box">
+                    <div class="search-list position-absolute" id="qearch-list">
+                        <!-- List here -->
+                        <div class="search-list-item d-flex">
+                            <div class="search-item-thumbnail">
+                                <img src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+                            </div>
+                            <div class="search-item-info">
+                                <h3>Batman Begins</h3>
+                                <p>2005</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of search container -->
+
+            <!-- Result container -->
+            <div class="container">
+                <div class="result-container">
+                    <div class="result-grid" id="result-grid">
+                        <!-- Movie information here -->
+                        <div class="movie-poster">
+                            <img src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" class="img-fluid" alt="movie poster">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">
+                                Batman Begins
+                            </h3>
+                            <ul class="movie-misc-info">
+                                <li class="year">
+                                    Année : 2005
+                                </li>
+                                <li class="rated">Note : PG-13</li>
+                                <li class="released"> Publié : 15 Jun 2005</li>
+                            </ul>
+                            <p class="genre">
+                                <b>Genre : </b> Action, Crime, Drama
+                            </p>
+                            <p class="writer">
+                                <b>Auteur : </b> Bob Kane, David S. Goyer, Christopher Nolan
+                            </p>
+                            <p class="actors">
+                                <b>Acteur : </b> Christian Bale, Michael Caine, Ken Watanabe
+                            </p>
+                            <p class="plot">
+                                <b>Plot : </b> After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.
+                            </p>
+                            <p class="language">
+                                <b>Langues : </b> English, Mandarin
+                            </p>
+                            <p class="awards">
+                                <b><i class="fa-solid fa-award"></i></b> Nominated for 1 Oscar. 13 wins & 79 nominations total
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End of result container -->
+
         </div>
     </header>
-    <main class="container flex-wrap">
-        <h2 class="h4 text-decoration-underline ">Vos resultats</h2>
-        <section class="w-100 d-flex container my-3">
-            <div class="card">
-                <a href=""><img src="https://cdn.pixabay.com/photo/2017/08/27/23/59/marvel-2688068_960_720.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <a href=""><img src="https://cdn.pixabay.com/photo/2017/08/27/23/59/capitanamerica-2688069_960_720.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-            </div>
-            <div class="card">
-                <a href=""><img src=" https://cdn.pixabay.com/photo/2017/08/28/00/02/daredevil-2688078_960_720.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
+    <main class="container">
+        <h2 class="h4 text-decoration-underline" id="rslt">Vos resultats</h2>
+        <section class="w-100 d-flex container my-5 row" id="post">
 
         </section>
     </main>
+
+    <footer class="fixed-bottom bg-black mt-5">
+        <div class="container py-2">
+            <ul class="list-unstyled text-light justify-content-center d-flex">
+                <li class="bold p-1"> Ali Nidhal</li>
+                <li class="bold p-1"> 2022 - 2023</li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -80,7 +126,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
+    <script src="index.js"></script>
 </body>
 
 </html>
