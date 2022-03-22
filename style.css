@@ -1,14 +1,19 @@
 :root {
-    --md-dark-color: #1d1d1d;
+    --md-dark-color: #192a56;
     --dark-color: #171717;
     --light-dark-color: #292929;
     --yellow-color: #d4aa11;
+    --blue-color: #34495e;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue-color);
 }
 
 .search-container {
@@ -114,7 +119,7 @@
 
 .movie-info {
     text-align: center;
-    color: #ff222f;
+    color: #fff;
     padding-top: 3rem;
 }
 
