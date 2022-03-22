@@ -11,19 +11,6 @@
     box-sizing: border-box;
 }
 
-
-/* .wrapper {
-    min-height: 100vh;
-    background-color: var(--dark-color);
-} */
-
-
-/* .wrapper .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-} */
-
 .search-container {
     background-color: var(--md-dark-color);
     height: 180px;

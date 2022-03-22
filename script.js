@@ -81,7 +81,7 @@ function displayMovieDetails(details) {
                      Année : ${details.Year}
                 </li>
                 <li class="rated">Note : ${details.Rated}</li>
-                <li class="released"> Publié : ${details.Released}</li>
+                <li class="released"> <b> Publié : </b> ${details.Released}</li>
             </ul>
             <p class="genre">
                 <b>Genre : </b> ${details.Genre}
