@@ -5,7 +5,7 @@ const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
 
-// Leod movies from API
+// Load movies from API
 
 async function leodMovies(searchTerm) {
     const URL = `https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=822d991b`;
