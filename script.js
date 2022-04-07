@@ -70,7 +70,7 @@ function loadMovieDetails() {
 function displayMovieDetails(details) {
     resultGrid.innerHTML = `
     <div class="movie-poster col-lg-4 d-flex justify-content-center">
-           <img src="${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" class="img-fluid" alt="movie poster">
+           <img src="${(details.Poster != "N/A") ? details.Poster : "assets/image_not_found.png"}" class="img-fluid" alt="movie poster">
      </div>
      <div class="movie-info col-lg-8">
           <h3 class="movie-title">
